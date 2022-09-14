@@ -1,29 +1,22 @@
 body {
     /* background-color: #66c4db; */
     background-color: #ebfafc;
-    height: 100vh;
+    height: 500vh;
     width: 100vw;
     display: flex;
     justify-content: center;
-    padding-top: 5%;
 }
 
 .content {
     background-color: white;
-    height: 500vh;
-    margin: 0;
+    height: 100%;
+    margin: 3%;
     padding: 0;
     width: 90vw;
     border-radius: 10px;
-}
-
-/* the intro section of the page */
-
-.intro {
-    height: 90vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10vh 80vh;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
 }
 
 /* header css */
@@ -33,6 +26,7 @@ body {
     grid-row: 1/2;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 10px;
 }
 
@@ -56,6 +50,7 @@ body {
 button#email {
     background-color: #f2c641;
     margin: 0;
+    height: 50px;
     min-width: 100px;
     color: white;
     border-radius: 10px;
@@ -64,16 +59,39 @@ button#email {
     
 }
 
+/* the intro section of the page */
+
+.intro {
+    min-height: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 15% 70% 15%;
+    padding: 0;
+    margin: 0;
+}
+
 /* intro body css */
+.intro-content {
+    grid-column: 1/6;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+}
 
 .intro-left {
     grid-column: 1/4;
-    grid-row: 2/3;
+    grid-row: 1/2;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding-left: 10%;
+    height: auto;
 }
 
 .intro-title {
@@ -82,17 +100,68 @@ button#email {
 
 .intro-right {
     grid-column: 4/6;
-    grid-row: 2/3;
+    height: auto;
+    grid-row: 1/2;
 }
 
 img#profile {
     width: 100%;
     min-height: 100%;
-    object-fit: contain;
+    object-fit:contain;
 }
 
-/* scrolling pictures of programming code */
+/* scrolling carousel */
 
-.code-scroll {
-    
-}
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1750px);
+    }
+  }
+  .slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    min-height: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    grid-column: 1/6;
+    grid-row: 3/4;
+  }
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 10%;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: 500vh;
+  }
+  .slider .slide {
+    height:80%;
+    width: 100%;
+  }
+  
+
+  .slide {
+    padding: 10px;
+  }
+
+
+/*# sourceMappingURL=style.css.map */
