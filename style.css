@@ -12,7 +12,7 @@ body {
 .content {
     background-color: white;
     height: 100%;
-    margin: 3%;
+    margin: 5%;
     padding: 0;
     width: 90vw;
     border-radius: 10px;
@@ -74,6 +74,7 @@ button#email {
 
 .intro {
     min-height: 25%;
+    max-height: 25%;
     min-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -102,21 +103,19 @@ button#email {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-left: 10%;
+    padding-left: 20%;
+    padding-bottom: 10%;
     height: auto;
     font-size: 15px;
 }
 
 span.name {
     font-size: 80px;
+    font-weight: 900;
 }
 
 .intro-title {
     width: 80%;
-    /* background-color: #66c4db;
-    color: white;
-    border: solid #66c4db;
-    border-radius: 10px; */
 }
 
 .intro-right {
@@ -186,24 +185,3 @@ img#profile {
 
 
 /*# sourceMappingURL=style.css.map */
-
-
-.ml6 {
-    position: relative;
-    font-weight: 900;
-    font-size: 3.3em;
-  }
-  
-  .ml6 .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.2em;
-    padding-right: 0.05em;
-    padding-bottom: 0.1em;
-    overflow: hidden;
-  }
-  
-  .ml6 .letter {
-    display: inline-block;
-    line-height: 1em;
-  }
