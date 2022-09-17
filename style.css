@@ -1,16 +1,23 @@
+:root {
+    --bg: #ffeedb;
+    --font: #1d2a5b;
+    --shadow: #c5cded;
+    --darkbg: #ffc380;
+}
+
 body {
     /* background-color: rgb(102, 196, 219); */
-    background-color: rgb(235, 250, 252);
-    background: linear-gradient(to right, rgb(235, 250, 252) 0%, rgb(102, 196, 219) 100%);
+    /* background-color: #ebfafc; */
+    background-color: var(--bg);
     height: 300vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     font-family: Comfortaa;
+    color: var(--font);
 }
 
 .content {
-    background: linear-gradient(to right, rgb(235, 250, 252) 0%, rgb(102, 196, 219) 100%);
     height: 100%;
     margin: 3%;
     padding: 0;
@@ -65,14 +72,14 @@ button {
 }
 
 button#email {
-    background-color: #f2c641;
+    background-color: var(--darkbg);
     margin: 0;
     height: 5vh;
     min-width: 10vw;
     color: white;
     border-radius: 10px;
-    border: none;
-    box-shadow: rgb(135, 135, 135) 5px 5px 5px;
+    box-shadow: var(--shadow) 5px 5px 5px;
+    border-color: var(--darkbg);
     
 }
 
@@ -104,7 +111,7 @@ button#email {
     align-items: center;
     flex-direction: column;
     font-size: 1.5vw;
-    background-image: url(./assets/hans-bw-logo.jpg);
+    background-image: url(./assets/hans-bw-no-bg.png);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 30%;
@@ -203,6 +210,8 @@ img#profile {
     align-items: center;
     justify-content: center;
     background-color: white;
+    box-shadow: 10px 20px 20px -5px rgba(0, 0, 0, 0.125);
+    ;
     
 }
 
@@ -215,6 +224,8 @@ img#profile {
     justify-content: center;
     align-content: flex-start;
     margin: 1%;
+    /* background-color: #c5cded */
+    ;
 }
 
 .about-left {
@@ -223,7 +234,7 @@ img#profile {
 
 .about-right {
     border: 2px black solid;
-    height: 90%;
+    height: 80%;
     padding: 1%;
 }
 
@@ -232,10 +243,28 @@ h2#about {
 }
 
 .left-text {
-    height: 70%;
-    border: 2px black solid;
+    height: 50%;
+    /* border: 2px black solid; */
     border-radius: 20px;
     padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.left-text > button {
+    width: 50%;
+    height: 5vh;
+    margin: 2%;
+    color: white;
+    border-color: var(--darkbg);
+    background-color: var(--darkbg);
+    /* background-color: #c5cded */;
+    box-shadow: 5px 5px 5px var(--shadow);
+    border-radius: 7px;
+    font-size: 0.8rem;
+    float: left;
 }
 
 /*# sourceMappingURL=style.css.map */
