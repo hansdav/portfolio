@@ -6,6 +6,10 @@
     --white: #ffffff
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 button {
     cursor: pointer;
 }
@@ -16,7 +20,7 @@ body {
     background-color: var(--bg);
     height: 400vh;
     width: 100vw;
-    margin: 0
+    margin: 0;
     display: flex;
     justify-content: center;
     font-family: Comfortaa;
@@ -51,7 +55,7 @@ body {
     gap: 15%;
 }
 
-.nav-buttons > button {
+.nav-buttons > a > button {
     background: var(--white);
     border: none;
 }
@@ -284,7 +288,7 @@ h2#about {
 
 .projects-slider {
     width: 40%;
-    height: 40%;
+    height: 50%;
     border-radius: 10px;
     margin: 0;
     border: var(--font) solid 4px;
@@ -376,7 +380,7 @@ button.carousel-button {
     padding-bottom: 10%;
 }
 
-.projects-right > button {
+.projects-right > a >button {
     background-color: var(--darkbg);
     aspect-ratio: 1;
     display: grid;
@@ -446,7 +450,7 @@ h2#projects {
     align-items: center;
 }
 
-.links > button {
+.links > a > button {
     background-color: var(--darkbg);
     aspect-ratio: 1;
     display: grid;
@@ -461,6 +465,11 @@ h2#projects {
 
 button#cv {
     font-size: 1rem;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    text-decoration: none;
 }
 
 
